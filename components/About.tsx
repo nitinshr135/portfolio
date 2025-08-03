@@ -18,12 +18,6 @@ const About = () => {
       year: '2020-2023'
     },
     {
-      icon: Users,
-      title: '30K+ Users Supported',
-      description: 'Scaled Spheron\'s platform to serve thousands of users',
-      year: '2021-Present'
-    },
-    {
       icon: Zap,
       title: '40% Performance Improvement',
       description: 'Enhanced UI performance through optimized rendering',
@@ -32,7 +26,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-dark-800">
+    <section id="about" className="section-padding bg-gray-50 dark:bg-black">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,7 +38,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-lg text-dark-600 dark:text-dark-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A passionate Senior Software Developer with expertise in Web3, React, and full-stack development. 
             Currently leading frontend development at Spheron, building scalable applications that serve thousands of users.
           </p>
@@ -58,36 +52,36 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-dark-800 dark:text-white">
+            <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
               Background & Education
             </h3>
             <div className="space-y-6">
               <div className="card p-6">
-                <h4 className="font-semibold text-lg mb-2 text-dark-800 dark:text-white">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">
                   Education
                 </h4>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-medium text-dark-700 dark:text-dark-200">
+                    <p className="font-medium text-gray-700 dark:text-gray-300">
                       B.Tech in Computer Science and Engineering
                     </p>
-                    <p className="text-sm text-dark-600 dark:text-dark-300">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       Jalpaiguri Government Engineering College • GPA: 8.31 • 2016-2020
                     </p>
                   </div>
                   <div>
-                    <p className="font-medium text-dark-700 dark:text-dark-200">
+                    <p className="font-medium text-gray-700 dark:text-gray-300">
                       12th Standard
                     </p>
-                    <p className="text-sm text-dark-600 dark:text-dark-300">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       Central Board of Secondary Education • 83.4% • 2015
                     </p>
                   </div>
                   <div>
-                    <p className="font-medium text-dark-700 dark:text-dark-200">
+                    <p className="font-medium text-gray-700 dark:text-gray-300">
                       10th Standard
                     </p>
-                    <p className="text-sm text-dark-600 dark:text-dark-300">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       Central Board of Secondary Education • 10 CGPA • 2013
                     </p>
                   </div>
@@ -95,14 +89,14 @@ const About = () => {
               </div>
 
               <div className="card p-6">
-                <h4 className="font-semibold text-lg mb-2 text-dark-800 dark:text-white">
+                <h4 className="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-200">
                   Current Role
                 </h4>
-                <p className="text-dark-600 dark:text-dark-300 mb-3">
-                  <span className="font-medium text-primary-600">Senior Software Developer</span> at Spheron
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  <span className="font-medium text-gray-800 dark:text-gray-200">Senior Software Developer</span> at Spheron
                 </p>
-                <p className="text-sm text-dark-600 dark:text-dark-300">
-                  Leading frontend development for a Web3 platform serving 30K+ users with 1.1K+ monthly transactions.
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Leading frontend development for a Web3 platform serving 50K+ active users with 1.1K+ monthly transactions.
                 </p>
               </div>
             </div>
@@ -115,7 +109,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-dark-800 dark:text-white">
+            <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">
               Key Achievements
             </h3>
             <div className="grid gap-6">
@@ -126,24 +120,24 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="card p-6 hover:shadow-xl transition-shadow duration-300"
+                  className="p-6 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center">
-                        <achievement.icon className="w-6 h-6 text-primary-600" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+                        <achievement.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold text-dark-800 dark:text-white">
+                        <h4 className="font-semibold text-white">
                           {achievement.title}
                         </h4>
-                        <span className="text-xs bg-primary-100 dark:bg-primary-900/30 text-primary-600 px-2 py-1 rounded-full">
+                        <span className="text-xs bg-gradient-to-r from-gray-800 to-gray-700 text-gray-200 px-2 py-1 rounded-full border border-gray-600">
                           {achievement.year}
                         </span>
                       </div>
-                      <p className="text-sm text-dark-600 dark:text-dark-300">
+                      <p className="text-sm text-gray-300">
                         {achievement.description}
                       </p>
                     </div>
@@ -162,15 +156,19 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="card p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 text-dark-800 dark:text-white">
-              My Mission
-            </h3>
-            <p className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed">
-              To build innovative, scalable, and user-centric applications that leverage cutting-edge technologies. 
-              I'm passionate about Web3, blockchain integration, and creating seamless user experiences that bridge 
-              the gap between traditional web applications and decentralized technologies.
-            </p>
+          <div className="p-8 max-w-4xl mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-2xl shadow-xl relative overflow-hidden">
+            {/* Gradient overlay for modern effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent pointer-events-none"></div>
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                My Mission
+              </h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                To build innovative, scalable, and user-centric applications that leverage cutting-edge technologies. 
+                I'm passionate about Web3, blockchain integration, and AI-powered solutions, creating seamless user experiences 
+                that bridge the gap between traditional web applications and the future of decentralized and intelligent technologies.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -38,7 +38,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 dark:bg-dark-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
@@ -59,7 +59,7 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 font-medium"
               >
                 {item.name}
               </motion.button>
@@ -73,27 +73,29 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               <Github size={20} />
             </motion.a>
             <motion.a
               href="mailto:nitinshr135@gmail.com"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               <Mail size={20} />
             </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-dark-700 dark:text-white"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          <div className="md:hidden flex items-center space-x-2">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 dark:text-gray-300"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -102,30 +104,30 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700"
+            className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
           >
             <div className="px-4 py-4 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium py-2"
+                  className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 font-medium py-2"
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-dark-700">
+              <div className="flex items-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-800">
                 <a
                   href="https://github.com/nitinshr135"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
                 >
                   <Github size={20} />
                 </a>
                 <a
                   href="mailto:nitinshr135@gmail.com"
-                  className="text-dark-700 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
                 >
                   <Mail size={20} />
                 </a>

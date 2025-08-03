@@ -1,15 +1,21 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '../contexts/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Nitin Sharma - Senior Software Developer',
-  description: 'Senior Software Developer specializing in Web3, React, Next.js, and full-stack development. Currently working at Spheron with expertise in blockchain integration and modern web technologies.',
+  description: 'Senior Software Developer specializing in Web3, React, Next.js, and full-stack development. Currently working at Spheron with expertise in blockchain and modern web technologies.',
   keywords: ['Web3', 'React', 'Next.js', 'TypeScript', 'Blockchain', 'Full-stack Developer', 'Spheron'],
   authors: [{ name: 'Nitin Sharma' }],
   creator: 'Nitin Sharma',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Nitin Sharma - Senior Software Developer',
     description: 'Senior Software Developer specializing in Web3, React, Next.js, and full-stack development.',
@@ -32,7 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

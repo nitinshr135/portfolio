@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: 'SAHAYAK',
       subtitle: 'Smart India Hackathon 2019 Winning Project',
-      description: 'A full-stack mobile app to connect NGOs, NRCs, and check-up camps, enabling real-time referrals of malnourished children and centralized tracking of their health data.',
+      description: 'A full-stack mobile app to connect NGOs, NRCs, and check-up camps, enabling real-time referrals of malnourished children and centralized tracking of their health data. This was a closed-source project submitted to the Government of India as part of the Smart India Hackathon.',
       highlights: [
         'Presented to Hon\'ble Prime Minister Shri Narendra Modi as team leader',
         'Real-time health data tracking and referral system',
@@ -17,7 +17,7 @@ const Projects = () => {
       ],
       techStack: ['React Native', 'Firebase', 'Node.js', 'Google Maps API', 'MongoDB', 'ImageJ'],
       links: {
-        github: 'https://github.com/nitinshr135/sahayak',
+        github: null,
         live: null
       },
       badge: 'Winner',
@@ -44,9 +44,9 @@ const Projects = () => {
     {
       title: 'Spheron Platform',
       subtitle: 'Web3 Infrastructure Platform',
-      description: 'Leading frontend development for Spheron\'s core platform, supporting 30K+ users with high performance and modularity.',
+      description: 'Leading frontend development for Spheron\'s core platform, supporting 50K+ active users with high performance and modularity.',
       highlights: [
-        '30K+ active users supported',
+        '50K+ active active users supported',
         '1.1K+ monthly transactions processed',
         '40% UI performance improvement',
         'Multi-chain Web3 integration'
@@ -54,7 +54,7 @@ const Projects = () => {
       techStack: ['Next.js', 'React', 'TypeScript', 'Web3.js', 'Ethers.js', 'Redux', 'Tailwind CSS', 'Node.js', 'MongoDB'],
       links: {
         github: null,
-        live: 'https://spheron.network'
+        live: 'https://console.spheron.network'
       },
       badge: 'Production',
       badgeColor: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
@@ -71,8 +71,8 @@ const Projects = () => {
       ],
       techStack: ['TypeScript', 'Web3.js', 'Ethers.js', 'NPM', 'GitHub', 'Documentation'],
       links: {
-        github: 'https://github.com/nitinshr135',
-        live: null
+        github: null,
+        live: 'https://www.npmjs.com/package/@spheron/protocol-sdk'
       },
       badge: 'Open Source',
       badgeColor: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300'
@@ -105,7 +105,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="card p-6 hover:shadow-xl transition-all duration-300 group"
+              className="p-6 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
@@ -197,7 +197,7 @@ const Projects = () => {
                     className="flex items-center gap-2 text-sm font-medium text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
                   >
                     <Globe size={16} />
-                    Live Demo
+                    {project.title === 'Web3 SDK' ? 'View Package' : 'Live Demo'}
                   </motion.a>
                 )}
               </div>
