@@ -12,7 +12,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-black dark:to-gray-900"></div>
 
@@ -43,7 +43,7 @@ const Hero = () => {
             className="mb-8"
           >
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Specializing in <span className="font-semibold">Web3</span>, <span className="font-semibold">React</span>, and{' '}
+              Specializing in <span className="font-semibold">Web3</span>, <span className="font-semibold">NextJs</span>, and{' '}
               <span className="font-semibold">full-stack development</span>. 
               Building scalable applications with 50K+ active users and 1.1K+ monthly transactions.
             </p>

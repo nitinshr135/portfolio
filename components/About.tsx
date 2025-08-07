@@ -39,7 +39,7 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A passionate Senior Software Developer with expertise in Web3, React, and full-stack development. 
+            A passionate Senior Software Developer with expertise in Web3, NextJs,React, Typescript and full-stack development. 
             Currently leading frontend development at Spheron, building scalable applications that serve thousands of users.
           </p>
         </motion.div>
