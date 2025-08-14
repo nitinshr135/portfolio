@@ -65,19 +65,29 @@ const Recommendations = () => {
                   "{recommendation.text}"
                 </blockquote>
 
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-semibold text-xl text-gray-800 dark:text-gray-200">
-                        {recommendation.name}
-                      </h4>
-                      <p className="text-base text-gray-600 dark:text-gray-400 font-medium">
-                        {recommendation.role}
-                      </p>
-                      <p className="text-base text-gray-500 dark:text-gray-500">
-                        {recommendation.company}
-                      </p>
-                    </div>
+                                 <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
+                   <div className="flex items-center justify-between">
+                     <div className="flex items-center gap-4">
+                       <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-700 shadow-lg">
+                         <img 
+                           src="https://media.licdn.com/dms/image/v2/D4E03AQHNHmjda9rMSw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718217708650?e=1758153600&v=beta&t=Fn37w7rMAjaY9C5kE4Ecyq8JnBRmQEhZXH_A5KxdgaM" 
+                           alt={`${recommendation.name} profile picture`}
+                           className="w-full h-full object-cover"
+                         />
+                       </div>
+                       
+                       <div>
+                         <h4 className="font-semibold text-xl text-gray-800 dark:text-gray-200">
+                           {recommendation.name}
+                         </h4>
+                         <p className="text-base text-gray-600 dark:text-gray-400 font-medium">
+                           {recommendation.role}
+                         </p>
+                         <p className="text-base text-gray-500 dark:text-gray-500">
+                           {recommendation.company}
+                         </p>
+                       </div>
+                     </div>
 
                     <a
                       href={recommendation.linkedinUrl}
