@@ -1,29 +1,30 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Award, Code, Users, Zap } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Award, Code, Users, Zap } from "lucide-react";
 
 const About = () => {
   const achievements = [
     {
       icon: Award,
-      title: 'Smart India Hackathon Winner',
-      description: 'Presented winning project to Hon\'ble Prime Minister Shri Narendra Modi',
-      year: '2019'
+      title: "Smart India Hackathon Winner",
+      description:
+        "Presented winning project to Hon'ble Prime Minister Shri Narendra Modi",
+      year: "2019",
     },
     {
       icon: Code,
-      title: '50+ Technical Articles',
-      description: 'Published on GeeksforGeeks covering Java and JavaScript',
-      year: '2020-2023'
+      title: "50+ Technical Articles",
+      description: "Published on GeeksforGeeks covering Java and JavaScript",
+      year: "2020-2023",
     },
     {
       icon: Zap,
-      title: '40% Performance Improvement',
-      description: 'Enhanced UI performance through optimized rendering',
-      year: '2021-Present'
-    }
-  ]
+      title: "40% Performance Improvement",
+      description: "Enhanced UI performance through optimized rendering",
+      year: "2021-Present",
+    },
+  ];
 
   return (
     <section id="about" className="section-padding bg-gray-50 dark:bg-black">
@@ -39,13 +40,14 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A passionate Senior Software Developer with expertise in Web3, NextJs,React, Typescript and full-stack development. 
-            Currently leading frontend development at Spheron, building scalable applications that serve thousands of users.
+            A passionate Senior Software Developer with expertise in Web3,
+            NextJs,React, Typescript and full-stack development. Currently
+            leading frontend development at Spheron, building scalable
+            applications that serve thousands of users.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Column - Personal Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +68,8 @@ const About = () => {
                       B.Tech in Computer Science and Engineering
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Jalpaiguri Government Engineering College • GPA: 8.31 • 2016-2020
+                      Jalpaiguri Government Engineering College • GPA: 8.31 •
+                      2016-2020
                     </p>
                   </div>
                   <div>
@@ -93,16 +96,19 @@ const About = () => {
                   Current Role
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400 mb-3">
-                  <span className="font-medium text-gray-800 dark:text-gray-200">Senior Software Developer</span> at Spheron
+                  <span className="font-medium text-gray-800 dark:text-gray-200">
+                    Senior Software Developer
+                  </span>{" "}
+                  at Spheron
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Leading frontend development for a Web3 platform serving 50K+ active users with 1.1K+ monthly transactions.
+                  Leading frontend development for a Web3 platform serving 50K+
+                  active users with 1.1K+ monthly transactions.
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column - Key Achievements */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -147,33 +153,9 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Mission Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="p-8 max-w-4xl mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 border border-gray-700 rounded-2xl shadow-xl relative overflow-hidden">
-            {/* Gradient overlay for modern effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent pointer-events-none"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4 text-white">
-                My Mission
-              </h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                To build innovative, scalable, and user-centric applications that leverage cutting-edge technologies. 
-                I'm passionate about Web3, blockchain integration, and AI-powered solutions, creating seamless user experiences 
-                that bridge the gap between traditional web applications and the future of decentralized and intelligent technologies.
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About 
+export default About;

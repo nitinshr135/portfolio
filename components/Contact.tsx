@@ -87,7 +87,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Dubai, UAE (Remote)',
+      value: 'India',
       link: null
     }
   ]
